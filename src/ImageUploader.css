@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   background: linear-gradient(to right, #e0e7ff, #d8b4fe);
+  box-sizing: border-box;
 }
 
 .card {
@@ -15,6 +16,7 @@
   max-width: 28rem;
   width: 100%;
   padding: 2rem;
+  box-sizing: border-box;
 }
 
 .title {
@@ -30,6 +32,7 @@
   width: 100%;
   color: #374151;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .preview-container {
@@ -37,10 +40,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.75rem;
 }
 
 .preview-label {
-  margin-bottom: 0.5rem;
   font-weight: 500;
   color: #374151;
 }
@@ -60,6 +63,7 @@
   justify-content: center;
   align-items: center;
   gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
 .scale-label {
@@ -141,4 +145,62 @@
   object-fit: contain;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 480px) {
+  .card {
+    max-width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .scale-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .scale-input {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .card {
+    max-width: 22rem;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+  }
+  
+  .scale-container {
+    gap: 0.5rem;
+  }
+  
+  .scale-input {
+    width: 6rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .card {
+    max-width: 28rem;
+  }
+  
+  .title {
+    font-size: 1.875rem;
+  }
+  
+  .scale-container {
+    flex-wrap: nowrap;
+  }
+  
+  .scale-input {
+    width: 5rem;
+  }
 }
